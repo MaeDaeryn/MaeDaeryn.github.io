@@ -52,57 +52,58 @@
     }
 
     /* Styling für jede Projektkarte */
-    .card {
-      background-color: #2a2a40;
-      border-radius: 1rem;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease;
-    }
+.card {
+  background-color: #2a2a40;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    /* Sicherstellen, dass das Bild das Container-Element gut ausfüllt */
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Skaliert das Bild so, dass es das Container-Element ausfüllt, ohne die Proportionen zu verzerren */
-    }
+/* Sicherstellen, dass das Bild das Container-Element gut ausfüllt */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Skaliert das Bild so, dass es das Container-Element ausfüllt, ohne die Proportionen zu verzerren */
+}
 
-    .card-content {
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient(to top, rgba(30, 30, 47, 0.95), rgba(30, 30, 47, 0));
-      color: #f1f1f1;
-      padding: 1rem;
-      width: 100%;
-      transition: opacity 0.3s ease;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      text-align: left;
-    }
+.card-content {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(30, 30, 47, 0.98), rgba(30, 30, 47, 0.4)); /* Dunklerer Hintergrund */
+  color: #f1f1f1;
+  padding: 1rem;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+}
 
-    .card:hover .card-content {
-      opacity: 1;
-    }
+.card:hover .card-content {
+  opacity: 1;
+}
 
-    .genre, .origin {
-      font-size: 0.85rem;
-      color: #aaa;
-      margin-top: 0.4rem;
-    }
+/* Weitere Stilregelungen */
+.genre, .origin {
+  font-size: 0.85rem;
+  color: #f1f1f1; /* Textfarbe in den Kacheln wird nun heller */
+  margin-top: 0.4rem;
+}
 
-    .emoji {
-      font-size: 1.2rem;
-    }
+.emoji {
+  font-size: 1.2rem;
+}
 
   </style>
 </head>
