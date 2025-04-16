@@ -43,28 +43,6 @@
       text-decoration: underline;
     }
 
-    /* Navigation */
-    .tabs {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .tabs a {
-      font-size: 1.2rem;
-      color: #d670a8;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      background-color: #2a2a40;
-      transition: background-color 0.3s ease;
-      text-align: center;
-    }
-
-    .tabs a:hover {
-      background-color: #d670a8;
-      color: #2a2a40;
-    }
-
     /* Grid Layout für die Projekte */
     .grid {
       display: grid;
@@ -133,146 +111,115 @@
       font-size: 1.5rem;
     }
 
-    /* About Me Section */
+    /* About Section */
     .about-me {
-      display: none;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
       background-color: #2a2a40;
-      padding: 2rem;
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
-    .about-me.active {
-      display: block;
+    .about-me p {
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
-
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <div class="tabs">
-    <a href="#" onclick="showTab('projects')">Meine Projekte</a>
-    <a href="#" onclick="showTab('about')">Über mich</a>
+  <!-- Header / Titel -->
+  <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
+  <p>Ich bin Programmiererin und Spieleentwicklerin</p>
+
+  <!-- Projekte Abschnitt -->
+  <h2 class="emoji">🎮 Projekte</h2>
+  <div class="grid">
+
+    <!-- Beispiel für Projektkarten -->
+    <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
+      <div class="card-content">
+        <h3>Drowsy Dancer</h3>
+        <p class="genre">Genre: Rhythm, Point and Click</p>
+        <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
+      </div>
+    </a>
+
+    <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
+      <div class="card-content">
+        <h3>Rob The Heck Out</h3>
+        <p class="genre">Genre: Indie, Action, Simulator</p>
+        <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
+      </div>
+    </a>
+
+    <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
+      <div class="card-content">
+        <h3>Beyond Shadows - Journey into the Underworld</h3>
+        <p class="genre">Genre: Point and Click</p>
+        <p class="origin">TheGameDev.tv Game Jam 2023</p>
+      </div>
+    </a>
+
+    <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
+      <div class="card-content">
+        <h3>Uber Meats</h3>
+        <p class="genre">Genre: Survival, Strategy</p>
+        <p class="origin">Ludum Dare 53</p>
+      </div>
+    </a>
+
+    <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
+      <div class="card-content">
+        <h3>Dreamconnection</h3>
+        <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
+        <p class="origin">GMTK Game Jam 2021</p>
+      </div>
+    </a>
+
+    <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
+      <div class="card-content">
+        <h3>Eunomia</h3>
+        <p class="genre">Genre: Adventure</p>
+        <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
+      </div>
+    </a>
+
   </div>
 
-  <!-- Meine Projekte Section -->
-  <div id="projects">
-    <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
-    <p>Ich bin Programmiererin und Spieleentwicklerin</p>
-
-    <h2 class="emoji">🎮 Projekte</h2>
-    <div class="grid">
-
-      <!-- Projektkarten -->
-      <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
-        <div class="card-content">
-          <h3>Drowsy Dancer</h3>
-          <p class="genre">Genre: Rhythm, Point and Click</p>
-          <p class="origin">BeansJam 2022, "Honorable Mentions"</p>
-        </div>
-      </a>
-
-      <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
-        <div class="card-content">
-          <h3>Rob The Heck Out</h3>
-          <p class="genre">Genre: Indie, Action, Simulator</p>
-          <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
-        </div>
-      </a>
-
-      <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
-        <div class="card-content">
-          <h3>Beyond Shadows</h3>
-          <p class="genre">Genre: Point and Click</p>
-          <p class="origin">TheGameDev.tv Game Jam 2023</p>
-        </div>
-      </a>
-
-      <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
-        <div class="card-content">
-          <h3>Uber Meats</h3>
-          <p class="genre">Genre: Survival, Strategy</p>
-          <p class="origin">Ludum Dare 53</p>
-        </div>
-      </a>
-
-      <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
-        <div class="card-content">
-          <h3>Dreamconnection</h3>
-          <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
-          <p class="origin">GMTK Game Jam 2021</p>
-        </div>
-      </a>
-
-      <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
-        <div class="card-content">
-          <h3>Eunomia</h3>
-          <p class="genre">Genre: Adventure</p>
-          <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- Mehr von mir: GitHub & Itch.io Links -->
-    <h2 class="emoji">🌐 Mehr von mir</h2>
-    <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
-
-    <ul>
-      <li>
-        🐙 <strong>GitHub:</strong>
-        <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
-      </li>
-      <li>
-        🎮 <strong>Itch.io:</strong>
-        <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
-      </li>
-    </ul>
-
-    <!-- Kontakt -->
-    <h2 class="emoji">📬 Kontakt</h2>
-    <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
+  <!-- Über mich Abschnitt -->
+  <h2 class="emoji">📚 Über mich</h2>
+  <div class="about-me">
+    <p>Moin,</p>
+    <p>ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.</p>
+    <p>Meine Haupttools? Unity und C# – mit diesen beiden arbeite ich am liebsten, wenn es darum geht, interaktive Erlebnisse zu gestalten. Aber auch in der 3D-Modellierung bin ich zuhause, vor allem mit Blender, um die visuellen Aspekte meiner Projekte zum Leben zu erwecken. Und nicht zu vergessen, meine Liebe zur 2D Art, die ich gerne in meinen Spielen und anderen kreativen Arbeiten einbringe.</p>
+    <p>Neben der Arbeit an meinen eigenen Projekten, die oft in Gamejams entstehen, arbeite ich aktuell für die Firma Aposan als Lead Developer an einem Point-and-Click Serious Game. Es macht riesigen Spaß, an Projekten zu arbeiten, die nicht nur unterhalten, sondern auch echte Mehrwerte bieten – und das alles am liebsten in einem tollen Team!</p>
   </div>
 
-  <!-- Über mich Section -->
-  <div id="about" class="about-me">
-    <h2 class="emoji">👩‍💻 Über mich</h2>
-    <p>Ich bin eine leidenschaftliche Programmiererin und Spieleentwicklerin mit Erfahrung in der Entwicklung von Indie-Spielen. Meine Schwerpunkte liegen in den Bereichen Gameplay-Design, Interaktive Systeme und C#-Programmierung. Ich bin immer auf der Suche nach kreativen und innovativen Projekten.</p>
+  <!-- Mehr von mir: GitHub & Itch.io Links -->
+  <h2 class="emoji">🌐 Mehr von mir</h2>
+  <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
 
-    <p>Ich liebe es, neue Tools und Technologien zu lernen, und bin stets bestrebt, meine Fähigkeiten und mein Wissen zu erweitern. Meine bevorzugte Entwicklungsumgebung ist Unity, aber ich bin auch in anderen Frameworks und Engines wie Godot und Unreal vertraut.</p>
+  <ul>
+    <li>
+      🐙 <strong>GitHub:</strong>
+      <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
+    </li>
+    <li>
+      🎮 <strong>Itch.io:</strong>
+      <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
+    </li>
+  </ul>
 
-    <h3>Technische Fähigkeiten:</h3>
-    <ul>
-      <li>C# und Unity</li>
-      <li>Game Design und Level Design</li>
-      <li>3D-Modellierung (mit Blender)</li>
-      <li>Git und Versionierung</li>
-    </ul>
-
-    <p>Ich freue mich, in zukünftigen Game Jams oder durch Open-Source-Projekte mit anderen Entwicklern zusammenzuarbeiten!</p>
-  </div>
-
-  <script>
-    // Funktion, um zwischen den Tabs zu wechseln
-    function showTab(tab) {
-      if (tab === 'projects') {
-        document.getElementById('projects').style.display = 'block';
-        document.getElementById('about').classList.remove('active');
-      } else if (tab === 'about') {
-        document.getElementById('projects').style.display = 'none';
-        document.getElementById('about').classList.add('active');
-      }
-    }
-
-    // Standardmäßig die Projekte anzeigen
-    showTab('projects');
-  </script>
+  <!-- Kontakt -->
+  <h2 class="emoji">📬 Kontakt</h2>
+  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
 
 </body>
 </html>
