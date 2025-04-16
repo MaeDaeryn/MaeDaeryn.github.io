@@ -51,7 +51,7 @@
       margin-top: 2rem;
     }
 
-    /* Styling für jede Projektkarte */
+/* Styling für jede Projektkarte */
 .card {
   background-color: #2a2a40;
   border-radius: 1rem;
@@ -75,6 +75,7 @@
   object-fit: cover; /* Skaliert das Bild so, dass es das Container-Element ausfüllt, ohne die Proportionen zu verzerren */
 }
 
+/* Karte-Inhalt */
 .card-content {
   position: absolute;
   bottom: 0;
@@ -94,7 +95,19 @@
   opacity: 1;
 }
 
-/* Weitere Stilregelungen */
+/* Überschrift im Karte-Inhalt */
+.card-content h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Text unter den Überschriften */
+.card-content p {
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+/* Genre und Ursprung */
 .genre, .origin {
   font-size: 0.85rem;
   color: #f1f1f1; /* Textfarbe in den Kacheln wird nun heller */
