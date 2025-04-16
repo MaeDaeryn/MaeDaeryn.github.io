@@ -7,7 +7,6 @@
 
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
     * {
@@ -21,7 +20,6 @@
       color: #f1f1f1;
       padding: 2rem;
       line-height: 1.6;
-      padding-bottom: 50px; /* Für Abstand zur unteren Leiste */
     }
 
     h1, h2 {
@@ -45,38 +43,27 @@
       text-decoration: underline;
     }
 
-    /* Tab Styles */
-    .tabs {
+    /* Navigation */
+    nav {
       display: flex;
       justify-content: center;
+      gap: 2rem;
       margin-bottom: 2rem;
     }
 
-    .tab {
-      padding: 1rem 2rem;
+    nav a {
+      padding: 0.5rem 1rem;
       background-color: #2a2a40;
-      border-radius: 10px 10px 0 0;
-      margin: 0 1rem;
+      border-radius: 8px;
+      color: #f1f1f1;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    .tab:hover {
-      background-color: #3d3d55;
-    }
-
-    .tab.active {
+    nav a:hover {
       background-color: #d670a8;
-      color: white;
-    }
-
-    /* Content Styles */
-    .content {
-      display: none;
-    }
-
-    .content.active {
-      display: block;
     }
 
     /* Grid Layout für die Projekte */
@@ -147,81 +134,47 @@
       font-size: 1.5rem;
     }
 
-    /* Fixed Footer Leiste */
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #1e1e2f;
-      color: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .footer a {
-      margin: 0 1rem;
-      font-size: 1.5rem;
-      color: #f1f1f1;
-      transition: color 0.3s ease;
-    }
-
-    .footer a:hover {
-      color: #d670a8; /* Soft Pink */
-    }
-
-    /* Logos in der Footer-Leiste */
-    .footer i {
-      font-size: 1.8rem;
-    }
-
-    /* Über Mich Styling */
+    /* About Section */
     .about-me {
-      margin-top: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
       background-color: #2a2a40;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
-    .about-me h2 {
-      margin-bottom: 1rem;
-      color: #d670a8;
+      border-radius: 8px;
     }
 
     .about-me p {
-      font-size: 1.1rem;
-      color: #f1f1f1;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    /* Hidden Sections */
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Tabs -->
-  <div class="tabs">
-    <div class="tab active" data-tab="about-me">Über mich</div>
-    <div class="tab" data-tab="projects">Projekte</div>
-  </div>
+  <!-- Header / Titel -->
+  <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
+  <p>Ich bin Programmiererin und Spieleentwicklerin</p>
 
-  <!-- Tab Content -->
-  <div id="about-me" class="content active">
-    <h2 class="emoji">👾 Über mich</h2>
-    <p>
-      Moin, ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.
-    </p>
-    <p>
-      Meine Haupttools? Unity und C# – mit diesen beiden arbeite ich am liebsten, wenn es darum geht, interaktive Erlebnisse zu gestalten. Aber auch in der 3D-Modellierung bin ich zuhause, vor allem mit Blender, um die visuellen Aspekte meiner Projekte zum Leben zu erwecken. Und nicht zu vergessen, meine Liebe zur 2D Art, die ich gerne in meinen Spielen und anderen kreativen Arbeiten einbringe.
-    </p>
-    <p>
-      Neben der Arbeit an meinen eigenen Projekten, die oft in Gamejams entstehen, arbeite ich aktuell für die Firma Aposan als Lead Developer an einem Point-and-Click Serious Game. Es macht riesigen Spaß, an Projekten zu arbeiten, die nicht nur unterhalten, sondern auch echte Mehrwerte bieten – und das alles am liebsten in einem tollen Team!
-    </p>
-  </div>
+  <!-- Navigation -->
+  <nav>
+    <a href="javascript:void(0)" onclick="showSection('projects')">Meine Projekte</a>
+    <a href="javascript:void(0)" onclick="showSection('about')">Über mich</a>
+  </nav>
 
-  <div id="projects" class="content">
-    <!-- Projekte Abschnitt -->
+  <!-- Projekte Abschnitt -->
+  <div id="projects" class="section active">
     <h2 class="emoji">🎮 Projekte</h2>
     <div class="grid">
+
       <!-- Beispiel für Projektkarten -->
       <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
         <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
@@ -276,37 +229,48 @@
           <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
         </div>
       </a>
+
     </div>
   </div>
 
-  <!-- Footer mit Links -->
-  <div class="footer">
-    <a href="https://github.com/MaeDaeryn" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://maedaeryn.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-    <a href="https://www.linkedin.com/in/célina-mae-berbig-a89583208/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:c.m.berbig@gmail.com"><i class="fas fa-envelope"></i></a>
+  <!-- Über mich Abschnitt -->
+  <div id="about" class="section">
+    <h2 class="emoji">📚 Über mich</h2>
+    <div class="about-me">
+      <p>Moin,</p>
+      <p>ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.</p>
+      <p>Meine Haupttools? Unity und C# – mit diesen beiden arbeite ich am liebsten, wenn es darum geht, interaktive Erlebnisse zu gestalten. Aber auch in der 3D-Modellierung bin ich zuhause, vor allem mit Blender, um die visuellen Aspekte meiner Projekte zum Leben zu erwecken. Und nicht zu vergessen, meine Liebe zur 2D Art, die ich gerne in meinen Spielen und anderen kreativen Arbeiten einbringe.</p>
+      <p>Neben der Arbeit an meinen eigenen Projekten, die oft in Gamejams entstehen, arbeite ich aktuell für die Firma Aposan als Lead Developer an einem Point-and-Click Serious Game. Es macht riesigen Spaß, an Projekten zu arbeiten, die nicht nur unterhalten, sondern auch echte Mehrwerte bieten – und das alles am liebsten in einem tollen Team!</p>
+    </div>
   </div>
 
+  <!-- Mehr von mir: GitHub & Itch.io Links -->
+  <h2 class="emoji">🌐 Mehr von mir</h2>
+  <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
+
+  <ul>
+    <li>
+      🐙 <strong>GitHub:</strong>
+      <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
+    </li>
+    <li>
+      🎮 <strong>Itch.io:</strong>
+      <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
+    </li>
+  </ul>
+
+  <!-- Kontakt -->
+  <h2 class="emoji">📬 Kontakt</h2>
+  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
+
   <script>
-    // Tabs Switch
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.content');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.getAttribute('data-tab');
-
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        contents.forEach(content => {
-          content.classList.remove('active');
-          if (content.id === target) {
-            content.classList.add('active');
-          }
-        });
+    function showSection(section) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => {
+        sec.classList.remove('active');
       });
-    });
+      document.getElementById(section).classList.add('active');
+    }
   </script>
 
 </body>
