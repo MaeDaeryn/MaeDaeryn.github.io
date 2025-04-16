@@ -45,6 +45,40 @@
       text-decoration: underline;
     }
 
+    /* Tab Styles */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      padding: 1rem 2rem;
+      background-color: #2a2a40;
+      border-radius: 10px 10px 0 0;
+      margin: 0 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab:hover {
+      background-color: #3d3d55;
+    }
+
+    .tab.active {
+      background-color: #d670a8;
+      color: white;
+    }
+
+    /* Content Styles */
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
     /* Grid Layout für die Projekte */
     .grid {
       display: grid;
@@ -164,12 +198,14 @@
 </head>
 <body>
 
-  <!-- Header / Titel -->
-  <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
-  <p>Ich bin Programmiererin und Spieleentwicklerin</p>
+  <!-- Navigation Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-tab="about-me">Über mich</div>
+    <div class="tab" data-tab="projects">Projekte</div>
+  </div>
 
-  <!-- Über Mich Abschnitt -->
-  <div class="about-me">
+  <!-- Tab Content -->
+  <div id="about-me" class="content active">
     <h2 class="emoji">👾 Über mich</h2>
     <p>
       Moin, ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.
@@ -182,73 +218,96 @@
     </p>
   </div>
 
-  <!-- Projekte Abschnitt -->
-  <h2 class="emoji">🎮 Projekte</h2>
-  <div class="grid">
-    <!-- Beispiel für Projektkarten -->
-    <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
-      <div class="card-content">
-        <h3>Drowsy Dancer</h3>
-        <p class="genre">Genre: Rhythm, Point and Click</p>
-        <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
-      </div>
-    </a>
+  <div id="projects" class="content">
+    <!-- Projekte Abschnitt -->
+    <h2 class="emoji">🎮 Projekte</h2>
+    <div class="grid">
+      <!-- Beispiel für Projektkarten -->
+      <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
+        <div class="card-content">
+          <h3>Drowsy Dancer</h3>
+          <p class="genre">Genre: Rhythm, Point and Click</p>
+          <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
+        </div>
+      </a>
 
-    <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
-      <div class="card-content">
-        <h3>Rob The Heck Out</h3>
-        <p class="genre">Genre: Indie, Action, Simulator</p>
-        <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
-      </div>
-    </a>
+      <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
+        <div class="card-content">
+          <h3>Rob The Heck Out</h3>
+          <p class="genre">Genre: Indie, Action, Simulator</p>
+          <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
+        </div>
+      </a>
 
-    <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
-      <div class="card-content">
-        <h3>Beyond Shadows - Journey into the Underworld</h3>
-        <p class="genre">Genre: Point and Click</p>
-        <p class="origin">TheGameDev.tv Game Jam 2023</p>
-      </div>
-    </a>
+      <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
+        <div class="card-content">
+          <h3>Beyond Shadows - Journey into the Underworld</h3>
+          <p class="genre">Genre: Point and Click</p>
+          <p class="origin">TheGameDev.tv Game Jam 2023</p>
+        </div>
+      </a>
 
-    <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
-      <div class="card-content">
-        <h3>Uber Meats</h3>
-        <p class="genre">Genre: Survival, Strategy</p>
-        <p class="origin">Ludum Dare 53</p>
-      </div>
-    </a>
+      <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
+        <div class="card-content">
+          <h3>Uber Meats</h3>
+          <p class="genre">Genre: Survival, Strategy</p>
+          <p class="origin">Ludum Dare 53</p>
+        </div>
+      </a>
 
-    <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
-      <div class="card-content">
-        <h3>Dreamconnection</h3>
-        <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
-        <p class="origin">GMTK Game Jam 2021</p>
-      </div>
-    </a>
+      <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
+        <div class="card-content">
+          <h3>Dreamconnection</h3>
+          <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
+          <p class="origin">GMTK Game Jam 2021</p>
+        </div>
+      </a>
 
-    <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
-      <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
-      <div class="card-content">
-        <h3>Eunomia</h3>
-        <p class="genre">Genre: Adventure</p>
-        <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
-      </div>
-    </a>
-
+      <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
+        <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
+        <div class="card-content">
+          <h3>Eunomia</h3>
+          <p class="genre">Genre: Adventure</p>
+          <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
+        </div>
+      </a>
+    </div>
   </div>
 
   <!-- Footer mit Links -->
   <div class="footer">
     <a href="https://github.com/MaeDaeryn" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://maedaeryn.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-    <a href="https://www.linkedin.com/in/maedaeryn/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.linkedin.com/in/célina-mae-berbig-a89583208/" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:c.m.berbig@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
+
+  <script>
+    // Tabs Switch
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === target) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
