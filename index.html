@@ -9,123 +9,113 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Styling für den gesamten Body */
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #1e1e2f;
+      background-color: #121212;
       color: #f1f1f1;
       padding: 2rem;
-      line-height: 1.6;
     }
 
+    /* Überschrift */
     h1, h2 {
-      color: #d670a8; /* Soft Pink */
+      color: #f1f1f1;
     }
 
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    h2 {
-      margin-top: 2rem;
-    }
-
-    a {
-      color: #8be9fd;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Grid Layout für die Projekte */
+    /* Grid für die Kacheln */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
-/* Styling für jede Projektkarte */
-.card {
-  background-color: #2a2a40;
-  border-radius: 1rem;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-  height: 350px; /* Feste Höhe für die Kacheln */
-}
+    /* Styling für jede Karte */
+    .card {
+      position: relative;
+      background-color: #2a2a40;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
 
-.card:hover {
-  transform: scale(1.05);
-}
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-/* Sicherstellen, dass das Bild das Container-Element gut ausfüllt */
-.card img {
-  width: 100%;
-  height: 200px; /* Höhe des Bildes */
-  object-fit: cover; /* Skaliert das Bild so, dass es das Container-Element ausfüllt, ohne die Proportionen zu verzerren */
-}
+    /* Bild Styling */
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-/* Karte-Inhalt */
-.card-content {
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(30, 30, 47, 0.98), rgba(30, 30, 47, 0.4)); /* Dunklerer Hintergrund */
-  color: #f1f1f1;
-  padding: 1rem;
-  width: 100%;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Text am oberen Rand des Containers */
-  text-align: left;
-}
+    /* Inhalt in der Karte */
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(30, 30, 47, 0.7); /* Dunklerer Hintergrund */
+      color: #f1f1f1;
+      padding: 1rem;
+      width: 100%;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
 
-.card:hover .card-content {
-  opacity: 1;
-}
+    .card:hover .card-content {
+      opacity: 1;
+    }
 
-/* Überschrift im Karte-Inhalt */
-.card-content h3 {
-  font-size: 1.5rem;
-  margin: 0;
-}
+    /* Titel der Karte */
+    .card-content h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: bold;
+    }
 
-/* Genre und Ursprung */
-.genre, .origin {
-  font-size: 0.85rem;
-  color: #f1f1f1;
-  margin-top: 0.4rem;
-}
+    /* Genre und Ursprung */
+    .genre, .origin {
+      font-size: 0.9rem;
+      color: #d670a8;
+      margin-top: 0.4rem;
+      font-weight: 400;
+    }
 
-.emoji {
-  font-size: 1.2rem;
-}
-
-
-
+    /* Emoji Style */
+    .emoji {
+      font-size: 1.5rem;
+    }
   </style>
 </head>
 <body>
-
+  <!-- Header / Titel -->
   <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
   <p>Ich bin Programmiererin und Spieleentwicklerin</p>
 
+  <!-- Projekte Abschnitt -->
   <h2 class="emoji">🎮 Projekte</h2>
   <div class="grid">
 
-    <!-- Beispiel Projekt -->
+    <!-- Beispiel für Projektkarten -->
     <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
       <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
       <div class="card-content">
@@ -147,7 +137,7 @@
     <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
       <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
       <div class="card-content">
-        <h3>Beyond Shadows</h3>
+        <h3>Beyond Shadows - Journey into the Underworld</h3>
         <p class="genre">Genre: Point and Click</p>
         <p class="origin">TheGameDev.tv Game Jam 2023</p>
       </div>
@@ -176,12 +166,13 @@
       <div class="card-content">
         <h3>Eunomia</h3>
         <p class="genre">Genre: Adventure</p>
-        <p class="origin">GameDesign2 Projekt HAW-Hamburg (2. Semester)</p>
+        <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
       </div>
     </a>
 
   </div>
 
+  <!-- Mehr von mir: GitHub & Itch.io Links -->
   <h2 class="emoji">🌐 Mehr von mir</h2>
   <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
 
@@ -196,8 +187,8 @@
     </li>
   </ul>
 
+  <!-- Kontakt -->
   <h2 class="emoji">📬 Kontakt</h2>
   <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
-
 </body>
 </html>
