@@ -156,6 +156,42 @@
     .section.active {
       display: block;
     }
+	
+	/* Footer Style */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2a2a40;
+  padding: 1rem 0;
+  text-align: center;
+  color: #f1f1f1;
+  z-index: 1000;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #d670a8; /* Soft Pink */
+}
+
+/* FontAwesome Icons */
+.fab, .fas {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
   </style>
 </head>
 <body>
@@ -244,25 +280,6 @@
     </div>
   </div>
 
-  <!-- Mehr von mir: GitHub & Itch.io Links -->
-  <h2 class="emoji">🌐 Mehr von mir</h2>
-  <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
-
-  <ul>
-    <li>
-      🐙 <strong>GitHub:</strong>
-      <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
-    </li>
-    <li>
-      🎮 <strong>Itch.io:</strong>
-      <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
-    </li>
-  </ul>
-
-  <!-- Kontakt -->
-  <h2 class="emoji">📬 Kontakt</h2>
-  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
-
   <script>
     function showSection(section) {
       const sections = document.querySelectorAll('.section');
@@ -272,6 +289,25 @@
       document.getElementById(section).classList.add('active');
     }
   </script>
+  
+    <!-- Footer mit Social Media Links -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/maedaeryn" target="_blank" class="footer-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://maedaeryn.itch.io" target="_blank" class="footer-icon">
+        <i class="fab fa-itch-io"></i>
+      </a>
+      <a href="https://github.com/MaeDaeryn" target="_blank" class="footer-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:c.m.berbig@gmail.com" class="footer-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
 
 </body>
 </html>
