@@ -7,6 +7,7 @@
 
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
     * {
@@ -20,6 +21,7 @@
       color: #f1f1f1;
       padding: 2rem;
       line-height: 1.6;
+      padding-bottom: 50px; /* Für Abstand zur unteren Leiste */
     }
 
     h1, h2 {
@@ -41,29 +43,6 @@
 
     a:hover {
       text-decoration: underline;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    nav a {
-      padding: 0.5rem 1rem;
-      background-color: #2a2a40;
-      border-radius: 8px;
-      color: #f1f1f1;
-      font-weight: 600;
-      text-transform: uppercase;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      background-color: #d670a8;
     }
 
     /* Grid Layout für die Projekte */
@@ -134,27 +113,34 @@
       font-size: 1.5rem;
     }
 
-    /* About Section */
-    .about-me {
-      max-width: 800px;
-      margin: 2rem auto;
+    /* Fixed Footer Leiste */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #1e1e2f;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 1rem;
-      background-color: #2a2a40;
-      border-radius: 8px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .about-me p {
-      font-size: 1.2rem;
-      line-height: 1.8;
+    .footer a {
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      color: #f1f1f1;
+      transition: color 0.3s ease;
     }
 
-    /* Hidden Sections */
-    .section {
-      display: none;
+    .footer a:hover {
+      color: #d670a8; /* Soft Pink */
     }
 
-    .section.active {
-      display: block;
+    /* Logos in der Footer-Leiste */
+    .footer i {
+      font-size: 1.8rem;
     }
   </style>
 </head>
@@ -164,114 +150,73 @@
   <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
   <p>Ich bin Programmiererin und Spieleentwicklerin</p>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="javascript:void(0)" onclick="showSection('projects')">Meine Projekte</a>
-    <a href="javascript:void(0)" onclick="showSection('about')">Über mich</a>
-  </nav>
-
   <!-- Projekte Abschnitt -->
-  <div id="projects" class="section active">
-    <h2 class="emoji">🎮 Projekte</h2>
-    <div class="grid">
+  <h2 class="emoji">🎮 Projekte</h2>
+  <div class="grid">
+    <!-- Beispiel für Projektkarten -->
+    <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
+      <div class="card-content">
+        <h3>Drowsy Dancer</h3>
+        <p class="genre">Genre: Rhythm, Point and Click</p>
+        <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
+      </div>
+    </a>
 
-      <!-- Beispiel für Projektkarten -->
-      <a href="https://maedaeryn.itch.io/beansjam22-whip" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/drowsyDancer.png" alt="Screenshot von Drowsy Dancer">
-        <div class="card-content">
-          <h3>Drowsy Dancer</h3>
-          <p class="genre">Genre: Rhythm, Point and Click</p>
-          <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
-        </div>
-      </a>
+    <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
+      <div class="card-content">
+        <h3>Rob The Heck Out</h3>
+        <p class="genre">Genre: Indie, Action, Simulator</p>
+        <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
+      </div>
+    </a>
 
-      <a href="https://magicstunts123.itch.io/robthehackout" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" alt="Screenshot von Rob The Heck Out">
-        <div class="card-content">
-          <h3>Rob The Heck Out</h3>
-          <p class="genre">Genre: Indie, Action, Simulator</p>
-          <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
-        </div>
-      </a>
+    <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
+      <div class="card-content">
+        <h3>Beyond Shadows - Journey into the Underworld</h3>
+        <p class="genre">Genre: Point and Click</p>
+        <p class="origin">TheGameDev.tv Game Jam 2023</p>
+      </div>
+    </a>
 
-      <a href="https://maedaeryn.itch.io/point-and-click" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/beyondShadows.png" alt="Screenshot von Beyond Shadows">
-        <div class="card-content">
-          <h3>Beyond Shadows - Journey into the Underworld</h3>
-          <p class="genre">Genre: Point and Click</p>
-          <p class="origin">TheGameDev.tv Game Jam 2023</p>
-        </div>
-      </a>
+    <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
+      <div class="card-content">
+        <h3>Uber Meats</h3>
+        <p class="genre">Genre: Survival, Strategy</p>
+        <p class="origin">Ludum Dare 53</p>
+      </div>
+    </a>
 
-      <a href="https://magicstunts123.itch.io/uber-meats" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/uberMeats.png" alt="Screenshot von Uber Meats">
-        <div class="card-content">
-          <h3>Uber Meats</h3>
-          <p class="genre">Genre: Survival, Strategy</p>
-          <p class="origin">Ludum Dare 53</p>
-        </div>
-      </a>
+    <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
+      <div class="card-content">
+        <h3>Dreamconnection</h3>
+        <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
+        <p class="origin">GMTK Game Jam 2021</p>
+      </div>
+    </a>
 
-      <a href="https://magicstunts123.itch.io/dreamconnection" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/dreamconnection.png" alt="Screenshot von Dreamconnection">
-        <div class="card-content">
-          <h3>Dreamconnection</h3>
-          <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
-          <p class="origin">GMTK Game Jam 2021</p>
-        </div>
-      </a>
+    <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
+      <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
+      <div class="card-content">
+        <h3>Eunomia</h3>
+        <p class="genre">Genre: Adventure</p>
+        <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
+      </div>
+    </a>
 
-      <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
-        <img src="https://maedaeryn.github.io/images/eunomia.png" alt="Screenshot von Eunomia">
-        <div class="card-content">
-          <h3>Eunomia</h3>
-          <p class="genre">Genre: Adventure</p>
-          <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
-        </div>
-      </a>
-
-    </div>
   </div>
 
-  <!-- Über mich Abschnitt -->
-  <div id="about" class="section">
-    <h2 class="emoji">📚 Über mich</h2>
-    <div class="about-me">
-      <p>Moin,</p>
-      <p>ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.</p>
-      <p>Meine Haupttools? Unity und C# – mit diesen beiden arbeite ich am liebsten, wenn es darum geht, interaktive Erlebnisse zu gestalten. Aber auch in der 3D-Modellierung bin ich zuhause, vor allem mit Blender, um die visuellen Aspekte meiner Projekte zum Leben zu erwecken. Und nicht zu vergessen, meine Liebe zur 2D Art, die ich gerne in meinen Spielen und anderen kreativen Arbeiten einbringe.</p>
-      <p>Neben der Arbeit an meinen eigenen Projekten, die oft in Gamejams entstehen, arbeite ich aktuell für die Firma Aposan als Lead Developer an einem Point-and-Click Serious Game. Es macht riesigen Spaß, an Projekten zu arbeiten, die nicht nur unterhalten, sondern auch echte Mehrwerte bieten – und das alles am liebsten in einem tollen Team!</p>
-    </div>
+  <!-- Footer mit Links -->
+  <div class="footer">
+    <a href="https://github.com/MaeDaeryn" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://maedaeryn.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+    <a href="https://www.linkedin.com/in/maedaeryn/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:c.m.berbig@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
-
-  <!-- Mehr von mir: GitHub & Itch.io Links -->
-  <h2 class="emoji">🌐 Mehr von mir</h2>
-  <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
-
-  <ul>
-    <li>
-      🐙 <strong>GitHub:</strong>
-      <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
-    </li>
-    <li>
-      🎮 <strong>Itch.io:</strong>
-      <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
-    </li>
-  </ul>
-
-  <!-- Kontakt -->
-  <h2 class="emoji">📬 Kontakt</h2>
-  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
-
-  <script>
-    function showSection(section) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(sec => {
-        sec.classList.remove('active');
-      });
-      document.getElementById(section).classList.add('active');
-    }
-  </script>
 
 </body>
 </html>
