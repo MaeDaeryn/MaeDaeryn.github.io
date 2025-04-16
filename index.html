@@ -9,31 +9,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Styling für den gesamten Body */
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #121212;
+      background-color: #1e1e2f;
       color: #f1f1f1;
       padding: 2rem;
+      line-height: 1.6;
     }
 
-    /* Überschrift */
     h1, h2 {
-      color: #f1f1f1;
+      color: #d670a8; /* Soft Pink */
     }
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
     }
 
-    /* Grid für die Kacheln */
+    h2 {
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #8be9fd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Grid Layout für die Projekte */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -41,7 +51,7 @@
       margin-top: 3rem;
     }
 
-    /* Styling für jede Karte */
+    /* Styling für jede Projektkarte */
     .card {
       position: relative;
       background-color: #2a2a40;
@@ -58,14 +68,12 @@
       transform: scale(1.05);
     }
 
-    /* Bild Styling */
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
 
-    /* Inhalt in der Karte */
     .card-content {
       position: absolute;
       bottom: 0;
@@ -85,14 +93,12 @@
       opacity: 1;
     }
 
-    /* Titel der Karte */
     .card-content h3 {
       font-size: 1.5rem;
       margin: 0;
       font-weight: bold;
     }
 
-    /* Genre und Ursprung */
     .genre, .origin {
       font-size: 0.9rem;
       color: #d670a8;
@@ -104,9 +110,11 @@
     .emoji {
       font-size: 1.5rem;
     }
+
   </style>
 </head>
 <body>
+
   <!-- Header / Titel -->
   <h1 class="emoji">👩‍💻 Hallo, ich bin Mae</h1>
   <p>Ich bin Programmiererin und Spieleentwicklerin</p>
@@ -121,7 +129,7 @@
       <div class="card-content">
         <h3>Drowsy Dancer</h3>
         <p class="genre">Genre: Rhythm, Point and Click</p>
-        <p class="origin">BeansJam 2022,"Honorable Mentions"</p>
+        <p class="origin">Entstanden beim BeansJam 2022, gelistet bei den "Honorable Mentions"</p>
       </div>
     </a>
 
@@ -130,7 +138,7 @@
       <div class="card-content">
         <h3>Rob The Heck Out</h3>
         <p class="genre">Genre: Indie, Action, Simulator</p>
-        <p class="origin">IU-Internen-Jam 2022 der Game Design Studenten</p>
+        <p class="origin">Entstanden im IU-Internen-Jam 2022 der Game Design Studenten</p>
       </div>
     </a>
 
@@ -139,7 +147,7 @@
       <div class="card-content">
         <h3>Beyond Shadows - Journey into the Underworld</h3>
         <p class="genre">Genre: Point and Click</p>
-        <p class="origin">TheGameDev.tv Game Jam 2023</p>
+        <p class="origin">Entstanden beim TheGameDev.tv Game Jam 2023</p>
       </div>
     </a>
 
@@ -148,7 +156,7 @@
       <div class="card-content">
         <h3>Uber Meats</h3>
         <p class="genre">Genre: Survival, Strategy</p>
-        <p class="origin">Ludum Dare 53</p>
+        <p class="origin">Entstanden beim Ludum Dare 53</p>
       </div>
     </a>
 
@@ -157,7 +165,7 @@
       <div class="card-content">
         <h3>Dreamconnection</h3>
         <p class="genre">Genre: Adventure, Platformer, Puzzle</p>
-        <p class="origin">GMTK Game Jam 2021</p>
+        <p class="origin">Entstanden im GMTK Game Jam 2021</p>
       </div>
     </a>
 
@@ -166,7 +174,7 @@
       <div class="card-content">
         <h3>Eunomia</h3>
         <p class="genre">Genre: Adventure</p>
-        <p class="origin">GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
+        <p class="origin">Entstanden im GameDesign2 Projekt HAW-Hamburg 2. Semester</p>
       </div>
     </a>
 
@@ -190,5 +198,6 @@
   <!-- Kontakt -->
   <h2 class="emoji">📬 Kontakt</h2>
   <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
+
 </body>
 </html>
