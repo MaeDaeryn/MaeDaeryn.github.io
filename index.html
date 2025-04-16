@@ -3,26 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mein Portfolio</title>
+  <title>Portfolio | MaeDaeryn </title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background: #121212;
-      color: #eee;
-      font-family: 'Fira Code', monospace;
-      padding: 2rem;
+    * {
+      box-sizing: border-box;
     }
-    h1 {
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e2f;
+      color: #f1f1f1;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
       color: #ff79c6;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #8be9fd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .projekt {
+      background-color: #2d2d44;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .projekt:hover {
+      transform: scale(1.02);
+    }
+
+    .emoji {
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <h1>👩‍💻 Hallo, ich bin Mae </h1>
-  <p>Ich bin Programmiererin & Spieleentwicklerin.</p>
-  <h2>🎮 Projekte</h2>
-  <ul>
-    <li><strong>Game 1</strong> – kleine Beschreibung</li>
-    <li><strong>Game 2</strong> – Link zu GitHub oder Itch.io</li>
-  </ul>
+
+  <h1 class="emoji">👩‍💻 Hallo, ich bin Mae </h1>
+  <p>Ich bin Programmiererin und Spieleentwicklerin.</p>
+
+  <h2 class="emoji">🎮 Projekte</h2>
+
+  <div class="projekt">
+    <h3>[Projektname 1]</h3>
+    <p>Kleiner Text über dein Projekt. Was macht es? Womit wurde es entwickelt?</p>
+    <a href="https://deinlinkzumprojekt.de" target="_blank">Zum Projekt ↗</a>
+  </div>
+
+  <div class="projekt">
+    <h3>[Projektname 2]</h3>
+    <p>Beschreibung des Spiels oder Tools. Optional: GitHub-Link, Itch.io etc.</p>
+    <a href="https://github.com/deinusername/deinprojekt" target="_blank">Code auf GitHub ↗</a>
+  </div>
+  
+<h2 class="emoji">🌐 Mehr von mir</h2>
+<p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
+
+<ul>
+  <li>
+    🐙 <strong>GitHub:</strong>
+    <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
+  </li>
+  <li>
+    🎮 <strong>Itch.io:</strong>
+    <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
+  </li>
+</ul>
+
+  <h2 class="emoji">📬 Kontakt</h2>
+  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
+
 </body>
 </html>
