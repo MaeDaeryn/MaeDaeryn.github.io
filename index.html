@@ -3,99 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | MaeDaeryn </title>
+  <title>Portfolio | Maedaeryn</title>
 
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
- <style>
-  * {
-    box-sizing: border-box;
-  }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #1e1e2f;
-    color: #f1f1f1;
-    padding: 2rem;
-    line-height: 1.6;
-  }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e2f;
+      color: #f1f1f1;
+      padding: 2rem;
+      line-height: 1.6;
+    }
 
-  h1, h2 {
-    color: #c08497;
-  }
+    h1, h2 {
+      color: #d670a8; /* Soft Pink */
+    }
 
-  h1 {
-    font-size: 2.5rem;
-  }
+    h1 {
+      font-size: 2.5rem;
+    }
 
-  h2 {
-    margin-top: 2rem;
-  }
+    h2 {
+      margin-top: 2rem;
+    }
 
-  a {
-    color: #8be9fd;
-    text-decoration: none;
-  }
+    a {
+      color: #8be9fd;
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .projekt {
-    background-color: #35354e; /* etwas kräftiger, aber angenehm */
-    padding: 1rem;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    transition: transform 0.2s, background-color 0.3s;
-  }
+    /* Grid Layout für die Projekte */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
-  .projekt:hover {
-    transform: scale(1.02);
-    background-color: #3f3f5c; /* leicht heller beim Hover */
-  }
+    /* Styling für jede Projektkarte */
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-  .emoji {
-    font-size: 1.2rem;
-  }
-</style>
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(30, 30, 47, 0.95), rgba(30, 30, 47, 0));
+      color: #f1f1f1;
+      padding: 1rem;
+      width: 100%;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .card:hover .card-content {
+      opacity: 1;
+    }
+
+    .emoji {
+      font-size: 1.2rem;
+    }
+
+  </style>
 </head>
 <body>
 
-  <h1 class="emoji">👩‍💻 Hallo, ich bin Mae </h1>
-  <p>Ich bin Programmiererin und Spieleentwicklerin.</p>
+  <!-- Header / Titel -->
+  <h1 class="emoji">👩‍💻 Hallo, ich bin Maedaeryn</h1>
+  <p>Ich bin Programmiererin und Spieleentwicklerin mit einem Faible für kreative Ideen und Indie-Games.</p>
 
+  <!-- Projekte Abschnitt -->
   <h2 class="emoji">🎮 Projekte</h2>
+  <div class="grid">
 
-  <div class="projekt">
-    <h3>[Projektname 1]</h3>
-    <p>Kleiner Text über dein Projekt. Was macht es? Womit wurde es entwickelt?</p>
-    <a href="https://deinlinkzumprojekt.de" target="_blank">Zum Projekt ↗</a>
+    <!-- Spiel 1: Death.exe -->
+    <a href="https://magicstunts123.itch.io/deathexe" class="card" target="_blank">
+      <img src="https://img.itch.zone/aW1nLzEyMzQ1NjcucG5n/original/abc123.png" alt="Screenshot von Death.exe">
+      <div class="card-content">
+        <h3>Death.exe</h3>
+        <p>Ein düsterer Dungeon-Crawler über das Leben nach dem Tod.</p>
+      </div>
+    </a>
+
+    <!-- Spiel 2: Eunomia -->
+    <a href="https://maedaeryn.itch.io/eunomia" class="card" target="_blank">
+      <img src="https://img.itch.zone/aW1nLzEyMzQ1NjcucG5n/original/def456.png" alt="Screenshot von Eunomia">
+      <div class="card-content">
+        <h3>Eunomia</h3>
+        <p>Ein leichtfüßiges Adventure über antike Gerechtigkeit und Mythen.</p>
+      </div>
+    </a>
+
   </div>
 
-  <div class="projekt">
-    <h3>[Projektname 2]</h3>
-    <p>Beschreibung des Spiels oder Tools. Optional: GitHub-Link, Itch.io etc.</p>
-    <a href="https://github.com/deinusername/deinprojekt" target="_blank">Code auf GitHub ↗</a>
-  </div>
-  
-<h2 class="emoji">🌐 Mehr von mir</h2>
-<p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
+  <!-- Mehr von mir: GitHub & Itch.io Links -->
+  <h2 class="emoji">🌐 Mehr von mir</h2>
+  <p>Hier findest du noch mehr von meinen Projekten, Spielideen und Open-Source-Spielereien:</p>
 
-<ul>
-  <li>
-    🐙 <strong>GitHub:</strong>
-    <a href="https://github.com/MaeDaeryn" target="_blank">github.com/MaeDaeryn</a>
-  </li>
-  <li>
-    🎮 <strong>Itch.io:</strong>
-    <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
-  </li>
-</ul>
+  <ul>
+    <li>
+      🐙 <strong>GitHub:</strong>
+      <a href="https://github.com/deinusername" target="_blank">github.com/deinusername</a>
+    </li>
+    <li>
+      🎮 <strong>Itch.io:</strong>
+      <a href="https://maedaeryn.itch.io" target="_blank">maedaeryn.itch.io</a>
+    </li>
+  </ul>
 
+  <!-- Kontakt -->
   <h2 class="emoji">📬 Kontakt</h2>
-  <p>Schreib mir gern: <a href="mailto:c.m.berbig@gmail.com">c.m.berbig@gmail.com</a></p>
+  <p>Schreib mir gern: <a href="mailto:deine@email.de">deine@email.de</a></p>
 
 </body>
 </html>
