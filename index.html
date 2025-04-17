@@ -18,20 +18,21 @@
 <style>
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #1b1b2f;
-    color: #e0e0e0;
+    background-color: #f9f5f0; /* Warmes, weiches Beige */
+    color: #2c2c2c; /* Dunkler Kontrasttext */
     scroll-behavior: smooth;
     padding-bottom: 4rem;
   }
 
   header {
-    background: #2d2d44;
+    background: #fff7f0;
     padding: 4rem 1rem;
     text-align: center;
+    border-bottom: 1px solid #e6e1db;
   }
 
   header h1 {
-    color: #a06cd5;
+    color: #d36c6c; /* Sanftes Altrosa */
     font-size: 3rem;
     margin-bottom: .5rem;
     font-family: 'Protest Strike', sans-serif;
@@ -39,10 +40,16 @@
 
   header p {
     font-size: 1.2rem;
+    color: #6a5d52;
+  }
+
+  .navbar-dark {
+    background-color: #fff7f0;
+    border-bottom: 1px solid #e6e1db;
   }
 
   .navbar-dark .navbar-nav .nav-link {
-    color: #f1e9db;
+    color: #6a5d52;
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Protest Strike', sans-serif;
@@ -51,7 +58,7 @@
   }
 
   .navbar-dark .navbar-nav .nav-link:hover {
-    color: #f72585; /* lebendiger Hover-Farbton */
+    color: #d36c6c;
   }
 
   section {
@@ -59,7 +66,7 @@
   }
 
   h2 {
-    color: #a06cd5;
+    color: #d36c6c;
     margin-bottom: 2rem;
     text-align: center;
     font-family: 'Protest Strike', sans-serif;
@@ -70,16 +77,16 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    background-color: #000;
+    background-color: #faf3ee;
   }
 
   .project-card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #2d2d44;
+    background-color: #fff7f0;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
 
   .project-card img {
@@ -96,8 +103,8 @@
   .project-overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(30, 30, 47, 0.95);
-    color: #f1e9db;
+    background: rgba(255, 247, 240, 0.9);
+    color: #2c2c2c;
     width: 100%;
     padding: 1rem;
     opacity: 0;
@@ -111,7 +118,7 @@
   .project-overlay h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
-    color: #c77dff;
+    color: #d36c6c;
   }
 
   .project-overlay p {
@@ -134,32 +141,35 @@
   .about-me {
     max-width: 800px;
     margin: auto;
-    background: #2d2d44;
+    background: #fff7f0;
     padding: 2rem;
     border-radius: .5rem;
-    color: #f1e9db;
+    color: #2c2c2c;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
   }
 
   footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #2d2d44;
+    background: #fff7f0;
     padding: 1rem 0;
     text-align: center;
+    border-top: 1px solid #e6e1db;
   }
 
   footer a {
     margin: 0 .5rem;
-    color: #f1e9db;
+    color: #6a5d52;
     font-size: 1.5rem;
     transition: color 0.3s ease;
   }
 
   footer a:hover {
-    color: #f72585;
+    color: #d36c6c;
   }
 </style>
+
 
 </head>
 <body>
