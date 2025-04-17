@@ -50,9 +50,11 @@
       text-align: center;
     }
     .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
+  width: 100%;
+  height: auto; /* Bild passt sich proportional an */
+  object-fit: contain; /* zeigt das ganze Bild */
+  background-color: #000;
+}
     .about-me {
       max-width: 800px;
       margin: auto;
