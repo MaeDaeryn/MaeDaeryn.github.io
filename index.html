@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MaeDaeryn | Portfolio</title>
-
-  <!-- Fonts & CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MaeDaeryn – Portfolio</title>
+  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Font Awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
   <style>
     body {
@@ -16,72 +18,61 @@
       background-color: #1e1e2f;
       color: #f1f1f1;
       scroll-behavior: smooth;
+      padding-bottom: 4rem; /* Platz für Footer */
     }
-
     header {
-      background-color: #2a2a40;
+      background: #2a2a40;
       padding: 4rem 1rem;
       text-align: center;
     }
-
     header h1 {
+      color: #d670a8;
       font-size: 3rem;
-      color: #d670a8;
+      margin-bottom: .5rem;
     }
-
-    nav {
-      background-color: #2a2a40;
-      padding: 1rem;
+    header p {
+      font-size: 1.2rem;
     }
-
-    nav a {
-      color: #f1f1f1;
-      margin: 0 1rem;
-      font-weight: bold;
+    .nav-link {
+      color: #f1f1f1 !important;
+      font-weight: 600;
       text-transform: uppercase;
-      text-decoration: none;
     }
-
-    nav a:hover {
-      color: #d670a8;
+    .nav-link:hover {
+      color: #d670a8 !important;
     }
-
     section {
       padding: 4rem 1rem;
     }
-
     h2 {
       color: #d670a8;
       margin-bottom: 2rem;
       text-align: center;
     }
-
-    .card img {
+    .card-img-top {
       height: 200px;
       object-fit: cover;
-	  width: 100%;
     }
-
     .about-me {
       max-width: 800px;
       margin: auto;
-      background-color: #2a2a40;
+      background: #2a2a40;
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: .5rem;
     }
-
     footer {
-      background-color: #2a2a40;
-      padding: 2rem 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #2a2a40;
+      padding: 1rem 0;
       text-align: center;
     }
-
     footer a {
+      margin: 0 .5rem;
       color: #f1f1f1;
-      margin: 0 1rem;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
-
     footer a:hover {
       color: #d670a8;
     }
@@ -92,147 +83,160 @@
   <!-- Header -->
   <header id="home">
     <h1>👩‍💻 MaeDaeryn</h1>
-    <p>Programmiererin & Spieleentwicklerin aus Hamburg</p>
+    <p>Programmiererin &amp; Spieleentwicklerin aus Hamburg</p>
   </header>
 
-  <!-- Navigation -->
-  <nav class="text-center sticky-top">
-    <a href="#projects">Projekte</a>
-    <a href="#about">Über mich</a>
-    <a href="#contact">Kontakt</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">MaeDaeryn</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Projekte -->
   <section id="projects">
-    <h2>🎮 Projekte</h2>
     <div class="container">
+      <h2>🎮 Projekte</h2>
       <div class="row g-4">
-        <!-- Projektkarten hier einfügen -->
-        <!-- Beispiel: -->
+        <!-- Drowsy Dancer -->
         <div class="col-md-4">
-          <a href="https://maedaeryn.itch.io/beansjam22-whip" target="_blank" class="card bg-dark text-white">
-            <img src="https://maedaeryn.github.io/images/drowsyDancer.png" class="card-img-top" alt="Drowsy Dancer">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/drowsyDancer.png"
+                 class="card-img-top" alt="Drowsy Dancer">
             <div class="card-body">
               <h5 class="card-title">Drowsy Dancer</h5>
-              <p class="card-text">Rhythm, Point and Click<br><small>BeansJam 2022, Honorable Mentions</small></p>
+              <p class="card-text">
+                Rhythm, Point and Click<br>
+                <small>BeansJam 2022 / Honorable Mentions</small>
+              </p>
+              <a href="https://maedaeryn.itch.io/beansjam22-whip"
+                 class="stretched-link"></a>
             </div>
-			
-			<!-- Drowsy Dancer -->
-<div class="col-md-4">
-  <a href="https://maedaeryn.itch.io/beansjam22-whip" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/drowsyDancer.png" class="card-img-top" alt="Drowsy Dancer">
-    <div class="card-body">
-      <h5 class="card-title">Drowsy Dancer</h5>
-      <p class="card-text">Rhythm, Point and Click<br><small>BeansJam 2022, Honorable Mentions</small></p>
-    </div>
-  </a>
-</div>
-
-<!-- Rob The Heck Out -->
-<div class="col-md-4">
-  <a href="https://magicstunts123.itch.io/robthehackout" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/robTheHeckOut.png" class="card-img-top" alt="Rob The Heck Out">
-    <div class="card-body">
-      <h5 class="card-title">Rob The Heck Out</h5>
-      <p class="card-text">Indie, Action, Simulator<br><small>IU-Jam 2022</small></p>
-    </div>
-  </a>
-</div>
-
-<!-- Beyond Shadows -->
-<div class="col-md-4">
-  <a href="https://maedaeryn.itch.io/point-and-click" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/beyondShadows.png" class="card-img-top" alt="Beyond Shadows">
-    <div class="card-body">
-      <h5 class="card-title">Beyond Shadows</h5>
-      <p class="card-text">Point and Click<br><small>TheGameDev.tv Jam 2023</small></p>
-    </div>
-  </a>
-</div>
-
-<!-- Uber Meats -->
-<div class="col-md-4">
-  <a href="https://magicstunts123.itch.io/uber-meats" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/uberMeats.png" class="card-img-top" alt="Uber Meats">
-    <div class="card-body">
-      <h5 class="card-title">Uber Meats</h5>
-      <p class="card-text">Survival, Strategy<br><small>Ludum Dare 53</small></p>
-    </div>
-  </a>
-</div>
-
-<!-- Dreamconnection -->
-<div class="col-md-4">
-  <a href="https://magicstunts123.itch.io/dreamconnection" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/dreamconnection.png" class="card-img-top" alt="Dreamconnection">
-    <div class="card-body">
-      <h5 class="card-title">Dreamconnection</h5>
-      <p class="card-text">Adventure, Platformer, Puzzle<br><small>GMTK Jam 2021</small></p>
-    </div>
-  </a>
-</div>
-
-<!-- Eunomia -->
-<div class="col-md-4">
-  <a href="https://maedaeryn.itch.io/eunomia" target="_blank" class="card bg-dark text-white">
-    <img src="https://maedaeryn.github.io/images/eunomia.png" class="card-img-top" alt="Eunomia">
-    <div class="card-body">
-      <h5 class="card-title">Eunomia</h5>
-      <p class="card-text">Adventure<br><small>HAW Hamburg Projekt</small></p>
-    </div>
-  </a>
-</div>
-
-          </a>
+          </div>
         </div>
-        <!-- Mehr Karten wie oben -->
+        <!-- Rob The Heck Out -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/robTheHeckOut.png"
+                 class="card-img-top" alt="Rob The Heck Out">
+            <div class="card-body">
+              <h5 class="card-title">Rob The Heck Out</h5>
+              <p class="card-text">
+                Indie, Action, Simulator<br>
+                <small>IU-Internen-Jam 2022</small>
+              </p>
+              <a href="https://magicstunts123.itch.io/robthehackout"
+                 class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Beyond Shadows -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/beyondShadows.png"
+                 class="card-img-top" alt="Beyond Shadows">
+            <div class="card-body">
+              <h5 class="card-title">Beyond Shadows</h5>
+              <p class="card-text">
+                Point and Click<br>
+                <small>TheGameDev.tv Game Jam 2023</small>
+              </p>
+              <a href="https://maedaeryn.itch.io/point-and-click"
+                 class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Uber Meats -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/uberMeats.png"
+                 class="card-img-top" alt="Uber Meats">
+            <div class="card-body">
+              <h5 class="card-title">Uber Meats</h5>
+              <p class="card-text">
+                Survival, Strategy<br>
+                <small>Ludum Dare 53</small>
+              </p>
+              <a href="https://magicstunts123.itch.io/uber-meats"
+                 class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Dreamconnection -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/dreamconnection.png"
+                 class="card-img-top" alt="Dreamconnection">
+            <div class="card-body">
+              <h5 class="card-title">Dreamconnection</h5>
+              <p class="card-text">
+                Adventure, Platformer, Puzzle<br>
+                <small>GMTK Game Jam 2021</small>
+              </p>
+              <a href="https://magicstunts123.itch.io/dreamconnection"
+                 class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Eunomia -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-white">
+            <img src="https://maedaeryn.github.io/images/eunomia.png"
+                 class="card-img-top" alt="Eunomia">
+            <div class="card-body">
+              <h5 class="card-title">Eunomia</h5>
+              <p class="card-text">
+                Adventure<br>
+                <small>HAW Hamburg Projekt</small>
+              </p>
+              <a href="https://maedaeryn.itch.io/eunomia"
+                 class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Über mich -->
   <section id="about">
-    <h2>📚 Über mich</h2>
-    <div class="about-me">
-      <p>Moin,</p>
-      <p>ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele- und Softwareentwicklung unterwegs.</p>
-      <p>Meine Haupttools? Unity und C#, 3D-Modellierung mit Blender und 2D Art fließen regelmäßig in meine Projekte ein.</p>
-      <p>Aktuell arbeite ich für die Firma Aposan als Lead Developer an einem Point-and-Click Serious Game.</p>
+    <div class="container">
+      <h2>📚 Über mich</h2>
+      <div class="about-me">
+        <p><strong>Moin,</strong></p>
+        <p>ich bin Mae, komme aus dem schönen Hamburg und bin seit ein paar Jahren mit voller Leidenschaft in der Welt der Spiele‑ und Softwareentwicklung unterwegs. Ob hobbymäßig oder beruflich – ich liebe es, neue Welten zu erschaffen und kreative Lösungen zu entwickeln.</p>
+        <p>Meine Haupttools? Unity und C# – damit baue ich interaktive Erlebnisse. Außerdem arbeite ich viel mit Blender für 3D-Modelle und liebe 2D‑Art.</p>
+        <p>Aktuell bin ich Lead Developer bei Aposan und entwickle ein Point‑and‑Click Serious Game. Ich freue mich immer auf neue Herausforderungen!</p>
+      </div>
     </div>
   </section>
 
   <!-- Kontakt -->
   <section id="contact">
-    <h2>📬 Kontakt</h2>
-    <p class="text-center">Du kannst mich direkt per E-Mail kontaktieren oder über meine Plattformen besuchen:</p>
-	<div class="container" style="max-width: 600px;">
-  <form action="mailto:c.m.berbig@gmail.com" method="POST" enctype="text/plain">
-    <div class="mb-3">
-      <label for="name" class="form-label">Dein Name</label>
-      <input type="text" class="form-control" name="name" id="name" required>
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Deine E-Mail</label>
-      <input type="email" class="form-control" name="email" id="email" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Nachricht</label>
-      <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-outline-light">Absenden</button>
-  </form>
-</div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <a href="https://www.linkedin.com/in/dein-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://maedaeryn.itch.io" target="_blank" aria-label="Itch.io"><i class="fas fa-gamepad"></i></a>
-    <a href="https://github.com/MaeDaeryn" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    <a href="mailto:c.m.berbig@gmail.com" aria-label="Mail"><i class="fas fa-envelope"></i></a>
-    <p class="mt-3">&copy; 2025 MaeDaeryn</p>
-  </footer>
-
-</body>
-</html>
+    <div class="container" style="max-width:600px">
+      <h2>📬 Kontakt</h2>
+      <form action="mailto:c.m.berbig@gmail.com" method="POST" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label">Dein Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-Mail</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Nachricht</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required
