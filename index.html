@@ -18,11 +18,11 @@
 <style>
   :root {
     --bg-dark: #2f2b35;
-    --bg-medium: #3b3951;
-    --accent-1: #f3d4a4;
-    --accent-2: #e0ae92;
-    --accent-3: #d77c71;
-    --text: #f1f1f1;
+    --bg-medium: #3b3951;     /* Einheitlicher Hintergrund für Footer & Navbar */
+    --accent-1: #f3d4a4;      /* Heller Akzent */
+    --accent-2: #e0ae92;      /* Subtiler Akzent (z. B. für Linien) */
+    --accent-3: #d77c71;      /* Kräftiger Akzent für Überschriften */
+    --text: #ffffff;          /* Weißer Text */
   }
 
   body {
@@ -53,7 +53,7 @@
   }
 
   .navbar-dark {
-    background-color: varvar(--bg-medium);
+    background-color: var(--bg-medium);
     border-bottom: 1px solid var(--accent-2);
   }
 
@@ -112,7 +112,7 @@
   .project-overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(47, 43, 53, 0.9); /* leicht transparenter Hintergrund */
+    background: rgba(47, 43, 53, 0.9);
     color: var(--text);
     width: 100%;
     padding: 1rem;
