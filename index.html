@@ -20,12 +20,12 @@
   
 <style>
   :root {
-  --bg-dark: #f8f4f2;        /* Heller Beigeton, warm & weich */
-  --bg-medium: #e8e1e1;      /* Softes Mauve-Grau für Boxen */
-  --accent-1: #a491b6;       /* Gedämpftes Lavendel für Links/Hover */
-  --accent-2: #cabec6;       /* Blasslila für Linien & Sektionen */
-  --accent-3: #6d5b7c;       /* Sattes Mauve für Headlines & Buttons */
-  --text: #2c2c2c;           /* Fast-Schwarz für gute Lesbarkeit */
+  --bg-dark: #fdf8f3;         /* Hellbeige Hintergrund */
+  --bg-medium: #f1e3d3;       /* Warmer Nude-Ton für Boxen */
+  --accent-1: #b4654a;        /* Rostrot für Links und Icons */
+  --accent-2: #ddb892;        /* Ocker für Details/Linien */
+  --accent-3: #884c5f;        /* Beerenrot für Headlines/Buttons */
+  --text: #3b2f2f;            /* Dunkles Schokobraun für Text */
 }
 
 
@@ -71,10 +71,15 @@
   }
 
   .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--accent-3);
+  color: var(--accent-1);
   text-decoration: underline;
-  text-shadow: 0 0 3px var(--accent-2);
+  text-shadow: 0 0 4px var(--accent-2);
 }
+
+footer a:hover {
+  color: var(--accent-3);
+}
+
 
 
   section {
